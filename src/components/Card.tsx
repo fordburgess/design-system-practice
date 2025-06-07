@@ -32,9 +32,8 @@ const Card: React.FC<CardProps> = ({ title, description, image, header, footer }
         alt='card-image'
       />
       <div className='h-1/2 p-4'>
-        {/* <h1 className='mb-4' style={{ color: themeStyles.palette.text.primary }}>{title}</h1> */}
-        <Typography variant='h1'>{title}</Typography>
-        <p style={{ color: themeStyles.palette.text.secondary }}>{description}</p>
+        <Typography variant="h1">{title}</Typography>
+        <Typography variant="p">{description}</Typography>
       </div>
       {
         footer && footer

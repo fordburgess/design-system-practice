@@ -5,6 +5,7 @@ export const themeConfig = {
       text: {
         primary: "#272727",
         secondary: "#4e4e4e",
+        ternary: "#c2c2c2"
       },
       components: {
         background: "#fff",
@@ -22,6 +23,7 @@ export const themeConfig = {
       text: {
         primary: "#f3f3f3",
         secondary: "#ededed",
+        ternary: "#cacaca"
       },
       components: {
         background: "#151515",
@@ -38,7 +40,8 @@ export const themeConfig = {
     palette: {
       text: {
         primary: "#6497b1",
-        secondary: "#b3cde0"
+        secondary: "#b3cde0",
+        ternary: "#002854"
       },
       components: {
         background: "#03396c",
