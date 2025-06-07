@@ -11,7 +11,7 @@ type CardProps = {
   width?: number,
 }
 
-const Card: React.FC<CardProps> = ({ title, description, image, header }) => {
+const Card: React.FC<CardProps> = ({ title, description, image, header, footer }) => {
   const themeStyles = useTheme().themeStyles;
 
   return (
@@ -34,6 +34,9 @@ const Card: React.FC<CardProps> = ({ title, description, image, header }) => {
         <h1 className='mb-4' style={{ color: themeStyles.palette.text.primary }}>{title}</h1>
         <p style={{ color: themeStyles.palette.text.secondary }}>{description}</p>
       </div>
+      {
+        footer && footer
+      }
     </div>
   )
 }
