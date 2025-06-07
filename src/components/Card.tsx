@@ -16,7 +16,7 @@ const Card: React.FC<CardProps> = ({ title, description, image, header }) => {
 
   return (
     <div
-      className='relative rounded-sm overflow-hidden mb-4 h-full w-[90%] md:h-2/3 md:w-[40%] md:mb-0'
+      className='relative rounded-sm overflow-hidden mb-4 min-h-full w-[90%] md:h-2/3 md:min-h-0 md:w-[40%] md:mb-0'
       style={{
         backgroundColor: themeStyles.palette.components.background,
         boxShadow: themeStyles.palette.components.boxShadow

@@ -24,7 +24,7 @@ function App() {
     <ThemeProvider>
       <Layout>
         <div
-          className="box-border overflow-y-scroll h-full flex flex-col items-center py-4 md:flex-row md:justify-around md:py-0"
+          className="box-border overflow-y-scroll h-full flex flex-col justify-start items-center py-4 md:flex-row md:justify-around md:py-0"
         >
           {
             testCards.map((card: any) => <Card title={card.title} description={card.description} image={card.image} header={<CardHeader />} />)
