@@ -1,5 +1,6 @@
 import { useTheme } from '../contexts/ThemeContext';
 import Select from './Select';
+import { themeConfig } from '../styles/themeConfig';
 
 const Navbar = () => {
   const currentTheme = useTheme().theme;
@@ -14,7 +15,9 @@ const Navbar = () => {
       }}
     >
       <Select
-        options={[{ text: 'Light', value: 'default'}, { text: 'Dark', value: 'defaultDark'}]}
+        options={
+          Object.entries(themeConfig).map(([key, value]) => ({ text: value.mode, value: key }))
+        }
         defaultValue={currentTheme}
         action={changeTheme}
       />

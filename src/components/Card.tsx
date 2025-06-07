@@ -1,5 +1,6 @@
 import React, { type ReactNode } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
+import Typography from './Typography';
 
 type CardProps = {
   title: string,
@@ -31,7 +32,8 @@ const Card: React.FC<CardProps> = ({ title, description, image, header, footer }
         alt='card-image'
       />
       <div className='h-1/2 p-4'>
-        <h1 className='mb-4' style={{ color: themeStyles.palette.text.primary }}>{title}</h1>
+        {/* <h1 className='mb-4' style={{ color: themeStyles.palette.text.primary }}>{title}</h1> */}
+        <Typography variant='h1'>{title}</Typography>
         <p style={{ color: themeStyles.palette.text.secondary }}>{description}</p>
       </div>
       {
