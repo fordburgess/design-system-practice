@@ -2,7 +2,7 @@ import React, { type ReactNode } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import Typography from './Typography';
 
-type CardProps = {
+export type CardProps = {
   title: string,
   description: string,
   image: string,

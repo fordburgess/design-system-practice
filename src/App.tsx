@@ -1,13 +1,13 @@
 import ThemeProvider from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
-import Card from "./components/Card";
+import Card, { type CardProps } from "./components/Card";
 import Courchevel from './assets/french-alps.webp';
 import GamlaStan from './assets/gamla-stan.jpg';
 import CardHeader from "./components/CardHeader";
 import "./styles/index.css";
 import CardFooter from "./components/CardFooter";
 
-const testCards = [
+const testCards: Array<CardProps & { credit: string }> = [
   {
     title: "Hello, World",
     description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -23,6 +23,7 @@ const testCards = [
 ]
 
 function App() {
+
   return (
     <ThemeProvider>
       <Layout>
@@ -30,7 +31,7 @@ function App() {
           className="box-border overflow-y-scroll h-full flex flex-col justify-start items-center py-4 md:flex-row md:justify-around md:py-0"
         >
           {
-            testCards.map((card: any) => {
+            testCards.map((card: CardProps) => {
               return (
                 <Card
                   title={card.title}
