@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react';
-import { useTheme } from '../contexts/ThemeContext';
-import Typography from './Typography';
+import { useTheme } from '../../contexts/ThemeContext';
+import Typography from '../Typography';
 
 export type CardProps = {
   title: string,

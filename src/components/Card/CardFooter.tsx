@@ -1,8 +1,8 @@
 import React from 'react'
-import { useTheme } from '../contexts/ThemeContext';
-import ShareLight from '../assets/share-light.png';
-import ShareDark from '../assets/share-dark.png';
-import Typography from './Typography';
+import { useTheme } from '../../contexts/ThemeContext';
+import ShareLight from '../../assets/share-light.png';
+import ShareDark from '../../assets/share-dark.png';
+import Typography from '../Typography';
 
 type CardFooterProps = {
   credit: string,

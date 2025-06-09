@@ -1,11 +1,11 @@
 import ThemeProvider from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
-import Card, { type CardProps } from "./components/Card";
+import Card, { type CardProps } from "./components/Card/Card";
 import Courchevel from './assets/french-alps.webp';
 import GamlaStan from './assets/gamla-stan.jpg';
-import CardHeader from "./components/CardHeader";
+import CardHeader from "./components/Card/CardHeader";
 import "./styles/index.css";
-import CardFooter from "./components/CardFooter";
+import CardFooter from "./components/Card/CardFooter";
 
 const testCards: Array<CardProps & { credit: string }> = [
   {

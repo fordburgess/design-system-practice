@@ -1,5 +1,5 @@
 import React from 'react';
-import DotMenu from '../assets/dotmenu.png';
+import DotMenu from '../../assets/dotmenu.png';
 
 const CardHeader = () => {
 
