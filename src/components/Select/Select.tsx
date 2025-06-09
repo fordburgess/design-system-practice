@@ -1,5 +1,5 @@
 import React, { type ChangeEvent } from 'react'
-import { useTheme } from '../contexts/ThemeContext'
+import { useTheme } from '../../contexts/ThemeContext'
 
 type SelectOption = {
   value: string,

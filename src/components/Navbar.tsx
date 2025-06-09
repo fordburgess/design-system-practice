@@ -1,5 +1,5 @@
 import { useTheme } from '../contexts/ThemeContext';
-import Select from './Select';
+import Select from './Select/Select';
 import { themeConfig } from '../styles/themeConfig';
 
 const Navbar = () => {
