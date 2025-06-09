@@ -1,7 +1,7 @@
 import { useContext, createContext, useState, type ReactNode, useEffect } from "react";
 import { themeConfig } from "../styles/themeConfig";
 
-type ThemeName = keyof typeof themeConfig;
+export type ThemeName = keyof typeof themeConfig;
 type ThemeStyles = typeof themeConfig.default;
 
 type ThemeContextTypes = {
@@ -13,13 +13,15 @@ type ThemeContextTypes = {
 const ThemeContext = createContext<ThemeContextTypes | undefined>(undefined);
 
 type ThemeProviderProps = {
-  children: ReactNode
+  children: ReactNode,
+  theme?: ThemeName
 }
 
-const ThemeProvider = ({ children }: ThemeProviderProps) => {
+const ThemeProvider = ({ children, theme: themeOverride }: ThemeProviderProps) => { // added theme override in order to hardcode theme in storybook
   const existingTheme: ThemeName | null = localStorage.getItem('theme') as ThemeName;
+  const initialTheme: ThemeName = themeOverride ? themeOverride : existingTheme;
 
-  const [theme, setTheme] = useState<ThemeName>(existingTheme ? existingTheme : 'default');
+  const [theme, setTheme] = useState<ThemeName>(initialTheme ? initialTheme : 'default');
   const themeStyles = themeConfig[theme];
 
   useEffect(() => {
