@@ -31,7 +31,7 @@ function App() {
           className="box-border overflow-y-scroll h-full flex flex-col justify-start items-center py-4 md:flex-row md:justify-around md:py-0"
         >
           {
-            testCards.map((card: CardProps) => {
+            testCards.map((card: CardProps & { credit: string }) => {
               return (
                 <Card
                   title={card.title}
