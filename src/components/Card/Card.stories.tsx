@@ -10,7 +10,7 @@ const meta = {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <div className='w-[1200px] h-[600px] flex justify-center items-center'>
+        <div className='w-[1200px] h-[700px] flex justify-center py-2'>
           <Story />
         </div>
       </ThemeProvider>
